@@ -27,6 +27,8 @@ defmodule Flexcase.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      { :inflex, "~> 1.8.0" }
+    ]
   end
 end

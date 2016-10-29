@@ -3,6 +3,7 @@ defmodule Flexcase.Mixfile do
 
   def project do
     [app: :flexcase,
+     escript: escript_config,
      version: "0.1.0",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
@@ -30,5 +31,9 @@ defmodule Flexcase.Mixfile do
     [
       { :inflex, "~> 1.8.0" }
     ]
+  end
+
+  defp escript_config do
+    [ main_module: Flexcase.CLI ]
   end
 end

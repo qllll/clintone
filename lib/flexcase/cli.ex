@@ -12,8 +12,8 @@ defmodule Flexcase.CLI do
                                aliases:  [ s: :snake,
                                            c: :camel ])
     case parse do
-      { [ snake: true ], [ words ], _ } -> { :snake, words }
-      { [ camel: true ], [ words ], _ } -> { :camel, words }
+      { [ snake: true ], words, _ } -> { :snake, words }
+      { [ camel: true ], words, _ } -> { :camel, words }
       _ -> :help
     end
   end
@@ -21,8 +21,8 @@ defmodule Flexcase.CLI do
   def process(:help) do
     IO.puts """
     usage:
-      flexcase -s "foo\\nbar"
-      flexcase -c "foo\\nbar"
+      flexcase -s "fooBar hogeFuga"
+      flexcase -c "foo_bar hoge_fuga"
     """
     System.halt(0)
   end
@@ -37,7 +37,6 @@ defmodule Flexcase.CLI do
 
   defp do_process(inflex, words) do
     words
-    |> String.split("\n")
     |> Enum.map(inflex)
     |> Enum.join("\n")
     |> IO.puts

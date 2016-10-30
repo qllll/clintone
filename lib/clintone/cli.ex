@@ -1,4 +1,4 @@
-defmodule Flexcase.CLI do
+defmodule Clintone.CLI do
   def main(argv) do
     argv
     |> parse_args
@@ -21,8 +21,8 @@ defmodule Flexcase.CLI do
   def process(:help) do
     IO.puts """
     usage:
-      flexcase -s fooBar hogeFuga
-      flexcase -c foo_bar hoge_fuga
+      clintone -s fooBar hogeFuga
+      clintone -c foo_bar hoge_fuga
     """
     System.halt(0)
   end

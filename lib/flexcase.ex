@@ -1,2 +1,0 @@
-defmodule Flexcase do
-end

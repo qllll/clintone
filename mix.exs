@@ -1,8 +1,8 @@
-defmodule Flexcase.Mixfile do
+defmodule Clintone.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :flexcase,
+    [app: :clintone,
      escript: escript_config,
      version: "0.1.0",
      elixir: "~> 1.3",
@@ -34,6 +34,6 @@ defmodule Flexcase.Mixfile do
   end
 
   defp escript_config do
-    [ main_module: Flexcase.CLI ]
+    [ main_module: Clintone.CLI ]
   end
 end

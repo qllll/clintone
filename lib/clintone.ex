@@ -1,0 +1,2 @@
+defmodule Clintone do
+end

@@ -1,8 +1,8 @@
-defmodule FlexcaseTest do
+defmodule ClintoneTest do
   use ExUnit.Case
-  doctest Flexcase
+  doctest Clintone
 
-  import Flexcase.CLI, only: [ parse_args: 1 ]
+  import Clintone.CLI, only: [ parse_args: 1 ]
 
   test ":help returned if unknown option given" do
     assert parse_args(["-u"]) == :help

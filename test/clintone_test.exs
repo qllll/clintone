@@ -9,13 +9,13 @@ defmodule ClintoneTest do
     assert parse_args(["--unknown"]) == :help
   end
 
-  test ":snake and words returned if snake given" do
-    assert parse_args(["-s", "foo", "bar"]) == { :snake, [ "foo", "bar" ] }
-    assert parse_args(["--snake", "foo", "bar"]) == { :snake, [ "foo", "bar" ] }
+  test ":snake returned if snake given" do
+    assert parse_args(["-s"]) == :snake
+    assert parse_args(["--snake"]) == :snake
   end
 
-  test ":camel and words returned if camel given" do
-    assert parse_args(["-c", "foo", "bar"]) == { :camel, [ "foo", "bar" ] }
-    assert parse_args(["--camel", "foo", "bar"]) == { :camel, [ "foo", "bar" ] }
+  test ":camel returned if camel given" do
+    assert parse_args(["-c"]) == :camel
+    assert parse_args(["--camel"]) == :camel
   end
 end

@@ -1,24 +1,11 @@
 # Clintone
 
-**TODO: Add description**
+```
+$ mix deps.get
+$ mix escript.build
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add `clintone` to your list of dependencies in `mix.exs`:
-
-    ```elixir
-    def deps do
-      [{:clintone, "~> 0.1.0"}]
-    end
-    ```
-
-  2. Ensure `clintone` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:clintone]]
-    end
-    ```
+$ echo "fooBar hogeFuga" | ./clintone -s
+$ echo "foo_bar hoge_fuga" | ./clintone -c
+$ pbpaste | ./clintone -s | pbcopy
+```
 

@@ -21,8 +21,8 @@ defmodule Flexcase.CLI do
   def process(:help) do
     IO.puts """
     usage:
-      flexcase -s "fooBar hogeFuga"
-      flexcase -c "foo_bar hoge_fuga"
+      flexcase -s fooBar hogeFuga
+      flexcase -c foo_bar hoge_fuga
     """
     System.halt(0)
   end

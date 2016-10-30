@@ -41,6 +41,6 @@ defmodule Clintone.CLI do
   end
 
   defp do_process(intone, words) do
-    intone.(words) |> IO.puts
+    intone.(words) |> IO.write
   end
 end
